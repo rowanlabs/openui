@@ -1,0 +1,55 @@
+plugins {
+    alias(libs.plugins.android.library)
+    id 'maven-publish'
+}
+def sdkVersion = '1.0.0'
+
+android {
+    namespace 'com.rowan.android.uiclasses'
+    compileSdk { version = release(36) { minorApiLevel = 1 } }
+
+    defaultConfig {
+        minSdk 24
+        consumerProguardFiles 'consumer-rules.pro'
+        buildConfigField 'String', 'SDK_VERSION', "\"${sdkVersion}\""
+    }
+    buildFeatures { buildConfig true }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()   // no javadoc jar: my XML examples in the class comments would break javadoc
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat   // ContextCompat / ResourcesCompat; material is not needed
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.rowanlabs.openui'
+                artifactId = 'sdk'
+                version = sdkVersion
+                pom {
+                    name = 'openui'
+                    description = 'Animated ocean wave card and self-caching "More apps" list for Android'
+                    url = 'https://github.com/rowanlabs/openui'
+                    licenses {
+                        license {
+                            name = 'Apache License 2.0'
+                            url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

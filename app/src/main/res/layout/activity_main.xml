@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="20dp">
+
+        <TextView
+            android:id="@+id/neuralOrbTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neural Orb View"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.rowan.android.uiclasses.NeuralOrbView
+            android:id="@+id/neuralOrb"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/neuralOrbTv" />
+
+        <TextView
+            android:id="@+id/oceanWaveTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ocean Wave View"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/neuralOrb" />
+
+        <com.rowan.android.uiclasses.OceanWaveView
+            android:id="@+id/oceanWave"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oceanWaveTv"
+            app:owv_containerColor="#282828"
+            app:owv_cornerRadius="10dp"
+            app:owv_icon="@drawable/baseline_celebration_24"
+            app:owv_iconBorderColor="#14FFE9"
+            app:owv_iconBorderWidth="2dp"
+            app:owv_iconCircleSize="60dp"
+            app:owv_iconSize="30dp"
+            app:owv_iconTint="#34A7FF"
+            app:owv_outerBorderColor="#FFFFFF"
+            app:owv_outerBorderWidth="5dp"
+            app:owv_text="Ocean Wave View"
+            app:owv_textAlign="left"
+            app:owv_textColor="#ffffff"
+            app:owv_textEllipsize="end"
+            app:owv_textFontStyle="italic"
+            app:owv_textLetterSpacing=".2"
+            app:owv_textLineSpacingExtra="6dp"
+            app:owv_textLineSpacingMultiplier=".7"
+            app:owv_textMaxLines="2"
+            app:owv_textPaddingHorizontal="10dp"
+            app:owv_textPaddingTop="10dp"
+            app:owv_textPosition="aboveWave"
+            app:owv_textSize="18sp"
+            app:owv_textUppercase="true"
+            app:owv_waveColor="#216838"
+            app:owv_waveLevel=".35"
+            app:owv_waveSpeed=".4" />
+
+        <TextView
+            android:id="@+id/moreappsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Moreapps View"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oceanWave" />
+
+        <com.rowan.android.uiclasses.MoreAppsView
+            android:id="@+id/moreAppsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rowan_apiUrl="https://dummyjson.com/c/0516-00cc-42cc-989c"
+            app:rowan_listCount="3"
+            app:rowan_hideWhenEmpty="true"
+            app:rowan_excludeOwnApp="true"
+            app:rowan_itemBackgroundColor="#FFFFFF"
+            app:rowan_itemBorderColor="#E6E8EB"
+            app:rowan_logoSize="48dp"
+            app:rowan_logoCornerRadius="12dp"
+            app:rowan_appTitleColor="#1B1F23"
+            app:rowan_appDescriptionColor="#6B7280"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moreappsTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

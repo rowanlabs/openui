@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OceanWaveView">
+        <!-- Wave / water -->
+        <attr name="owv_waveColor" format="color" />
+        <attr name="owv_waveLevel" format="float" />          <!-- 0..1 how much of the view is filled (default 0.35) -->
+        <attr name="owv_waveAmplitude" format="dimension" />
+        <attr name="owv_waveSpeed" format="float" />          <!-- 1 = normal -->
+
+        <!-- Container + OUTER border -->
+        <attr name="owv_cornerRadius" format="dimension" />
+        <attr name="owv_containerColor" format="color" />     <!-- area above the water (default transparent) -->
+        <attr name="owv_outerBorderColor" format="color" />
+        <attr name="owv_outerBorderWidth" format="dimension" /> <!-- default 0 = no border -->
+
+        <!-- Icon (replaces the arrow) -->
+        <attr name="owv_icon" format="reference" />
+        <attr name="owv_iconTint" format="color" />
+        <attr name="owv_iconSize" format="dimension" />
+        <attr name="owv_iconCircleSize" format="dimension" />
+        <attr name="owv_iconBorderColor" format="color" />
+        <attr name="owv_iconBorderWidth" format="dimension" />
+
+        <!-- Text (behaves like a TextView) -->
+        <attr name="owv_text" format="string" />
+        <attr name="owv_textColor" format="color" />
+        <attr name="owv_textSize" format="dimension" />
+        <attr name="owv_textFontFamily" format="reference|string" />  <!-- @font/xxx or "sans-serif-medium" -->
+        <attr name="owv_textFontStyle">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+            <enum name="boldItalic" value="3" />
+        </attr>
+        <attr name="owv_textMaxLines" format="integer" />              <!-- default 1; 0 or less = unlimited -->
+        <attr name="owv_textEllipsize">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />                        <!-- start/middle only work with 1 line -->
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+        </attr>
+        <attr name="owv_textAlign">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="owv_textLineSpacingExtra" format="dimension" />
+        <attr name="owv_textLineSpacingMultiplier" format="float" />
+        <attr name="owv_textLetterSpacing" format="float" />           <!-- in em, like android:letterSpacing -->
+        <attr name="owv_textUppercase" format="boolean" />
+        <attr name="owv_textPaddingTop" format="dimension" />          <!-- default 5dp -->
+        <attr name="owv_textPaddingHorizontal" format="dimension" />   <!-- default 12dp -->
+        <attr name="owv_textPosition">
+            <enum name="top" value="0" />                          <!-- textPaddingTop from the top -->
+            <enum name="aboveWave" value="1" />                    <!-- centered between top and the wave -->
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="rowan_MoreAppsView">
+        <!--  Data  -->
+        <attr name="rowan_apiUrl" format="string"/>
+        <attr name="rowan_listCount" format="integer"/>
+        <!--  max rows to show (also skeleton rows). 0 = show all  -->
+        <attr name="rowan_hideWhenEmpty" format="boolean"/>
+        <!--  default true: view is GONE when there is nothing to show  -->
+        <attr name="rowan_excludeOwnApp" format="boolean"/>
+        <!--  default true: hides the app that is currently running  -->
+        <!--  Row look  -->
+        <attr name="rowan_itemBackgroundColor" format="color"/>
+        <attr name="rowan_itemBorderColor" format="color"/>
+        <attr name="rowan_itemBorderWidth" format="dimension"/>
+        <attr name="rowan_itemCornerRadius" format="dimension"/>
+        <attr name="rowan_itemSpacing" format="dimension"/>
+        <attr name="rowan_itemPadding" format="dimension"/>
+        <attr name="rowan_logoSize" format="dimension"/>
+        <attr name="rowan_logoCornerRadius" format="dimension"/>
+        <attr name="rowan_skeletonColor" format="color"/>
+        <!--  placeholder / loading color  -->
+        <!--  Texts  -->
+        <attr name="rowan_appTitleColor" format="color"/>
+        <attr name="rowan_appTitleSize" format="dimension"/>
+        <attr name="rowan_appDescriptionColor" format="color"/>
+        <attr name="rowan_appDescriptionSize" format="dimension"/>
+        <attr name="rowan_appDescriptionMaxLines" format="integer"/>
+    </declare-styleable>
+
+</resources>

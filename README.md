@@ -8,7 +8,7 @@ OpenUI is an Android UI classes SDK by Rowan Vex (Rowan Labs), written in Java. 
 ## SDK overview
 
 - Package: `com.rowan.android.uiclasses`
-- Current version: `1.0.0` (not yet published)
+- Current version: `1.0.1.1` (published)
 - Minimum Android version: API 24
 - Language: Java 11
 

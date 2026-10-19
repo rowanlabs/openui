@@ -44,6 +44,12 @@ dependencies {
 ```
 
 The SDK has a dependency on AndroidX AppCompat. `MoreAppsView` uses the `INTERNET` permission, which is declared by the SDK manifest and merged into the consuming app.
+## Video Examples
+
+
+https://github.com/user-attachments/assets/c1bb85bd-f7e9-4da3-b5ab-11e7d8990de6
+
+
 
 ## NeuralOrbView
 
